@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Frontend Mentor | Interactive pricing component</title>
+</head>
+<body>
+
+  <div class="intro">
+    <h1 class="intro__headline">Simple, traffic-based pricing</h1>
+    <h2 class="intro__subheadline"><span>Sign-up for our 30-day trial.</span> <span>No credit card required.</span></h2>
+  </div>
+
+  <div class="component">
+    <div class="component__billing">
+      <div class="component__billing-pageviews">
+        <div class="component__billing-pageviews-amount">10K PAGEVIEWS</div>
+        <div class="component__billing-pageviews-slider">
+          <input type="range" class="component__billing-pageviews-bar" min="1" value="1" max="5">
+          <div class="component__billing-pageviews-slider-track"></div>
+        </div>
+        <div class="component__billing-pageviews-pricing">
+          <span class="component__billing-pageviews-pricing-dollar">$8.00</span>
+          <div class="span component__billing-pageviews-pricing-time">/ month</div>
+        </div>
+      </div>
+      <div class="component__billing-time">
+        <div class="component__billing-time-period">Monthly Billing</div>
+        <label for="toggle">
+          <div class="component__billing-time-toggle inactive">
+            <div class="component__billing-time-toggle-circle"></div>
+          </div>
+        </label>
+        <input name="toggle" id="toggle" type="checkbox">
+        <div class="component__billing-time-period">
+          Yearly Billing <span class="component__billing-time-period-discount">-25%</span>
+        </div>
+      </div>
+    </div>
+    <div class="component__trial">
+      <ul class="component__trial-features">
+        <li class="component__trial-features-item">Unlimited websites</li>
+        <li class="component__trial-features-item">100% data ownership</li>
+        <li class="component__trial-features-item">Email reports</li>
+      </ul>
+      <button class="component__trial-btn">Start my trial</button>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

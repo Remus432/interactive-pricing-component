@@ -1,0 +1,47 @@
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+*:focus
+  outline: none
+
+html
+  font-size: 62.5%
+  font-family: 'Manrope', sans-serif
+
+body
+  background-image: url(".././images/bg-pattern.svg")
+  background-repeat: no-repeat
+  background-position: 0% 0%
+  background-size: 300%
+  height: 100vh
+  font-size: 1.5rem
+
+  &::before
+    background-image: url(".././images/pattern-circles.svg")
+    background-repeat: no-repeat
+    background-size: cover
+    content: ""
+    position: absolute
+    top: 25px
+    left: 50%
+    transform: translateX(-50%)
+    width: 180px
+    height: 180px
+    z-index: -1
+    
+#toggle
+  display: none
+
+.inactive
+  background-color: $toggle-bg
+
+  & .component__billing-time-toggle-circle
+    left: 5px
+
+.active
+  background-color: $slider-background
+
+  & .component__billing-time-toggle-circle
+    left: 25px

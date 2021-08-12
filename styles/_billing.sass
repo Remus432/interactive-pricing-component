@@ -1,0 +1,111 @@
+.component__billing
+  padding: 2rem
+
+  &-time
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: 1rem
+
+    &-period
+      color: $text
+      font-weight: 600
+      
+      &-discount
+        background: $discount-bg
+        color: $discount-text
+        border-radius: 15px
+        padding: .5rem
+        font-size: 1.2rem
+        margin-left: .8rem
+
+
+    &-toggle
+      border-radius: 100px
+      cursor: pointer
+      width: 50px
+      height: 25px
+      margin: 0 1rem
+      position: relative
+      transition: .5s all ease-in
+
+      &-circle
+        background: #fff
+        border-radius: 50%
+        width: 17px
+        height: 17px
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        transition: .5s all
+        transition-timing-function: cubic-bezier(.21,-0.12,1,.61)
+
+  &-pageviews
+    display: grid
+    grid-template-columns: repeat(1, 1fr)
+    grid-gap: 4rem
+    align-items: center
+    padding: 1.5rem
+    width: 100%
+  
+    &-amount
+      color: $text
+      text-align: center
+      font-weight: 600
+
+    &-slider
+      position: relative
+
+      &-track
+        position: absolute
+        top: 5px
+        left: 0
+        background: $full-slider-bar
+        border-radius: 10px
+        width: 0
+        height: 10px
+        transition: .2s all ease-in
+
+    &-pricing
+      display: flex
+      align-items: center
+      justify-content: center
+
+      &-dollar
+        font-weight: 800
+        font-size: 3rem
+        margin-right: .6rem
+
+      &-time
+        color: $text
+        font-weight: 600
+
+  &-pageviews-bar
+    -webkit-appearance: none
+    width: 100%
+    height: 10px
+    background: $empty-slider-bar
+    border-radius: 5px
+
+    &::-webkit-slider-thumb
+      -webkit-appearance: none
+      background: url(".././images/icon-slider.svg"), $full-slider-bar
+      background-size: 50%
+      background-repeat: no-repeat
+      background-position: center
+      border-radius: 50%
+      box-shadow: 0 10px 20px rgba($full-slider-bar, 1)
+      cursor: grab
+      width: 50px
+      height: 50px
+      position: relative
+      z-index: 3
+
+      &:active
+        background: url(".././images/icon-slider.svg"), $slider-background
+        background-size: 50%
+        background-repeat: no-repeat
+        background-position: center
+
+    &::-webkit-slider-runnable-track
+      -webkit-appearance: none
